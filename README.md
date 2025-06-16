@@ -14,4 +14,4 @@ or
 Run the following command:
 ```
 curl http://localhost:8082
-``
+```
