@@ -1,6 +1,21 @@
+# Use the official Python image
 FROM python:3-alpine
+
+# Set working directory
 WORKDIR /flask
-COPY . .
+
+# Copy requirements to working directory and install libraries
+COPY requirements.txt .
 RUN pip install -r requirements.txt
-ENTRYPOINT ["python", "app/flask_app.py"]
+
+# Copy app folder to working directory
+COPY app/. ./app
+
+# Set envirornment variables for Flask app
+ENV FLASK_APP=app/flask_app.py
+
+# Expose port
 EXPOSE 8082
+
+# Run Flask app
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8082"]
