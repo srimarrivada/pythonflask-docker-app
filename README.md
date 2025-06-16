@@ -2,10 +2,10 @@
 A simple Python Flask web application running in Docker.
 
 ## Build & Run
-Use the following commands to build and run `pythonflask-docker-app` application:
+Use the following commands to build and run the application:
 ```
-docker build -t pythonflask-docker-app .
-docker run -p 8082:8082 pythonflask-docker-app
+docker build -t pythonflask .
+docker run --name pythonflask-demo -p 8082:8082 pythonflask
 ```
 
 ## Test
