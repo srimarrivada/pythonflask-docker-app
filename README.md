@@ -9,9 +9,9 @@ docker run --name pythonflask-demo -p 8082:8082 pythonflask
 ```
 
 ## Test
-Open web browser and hit URL [http://localhost:8082](http://localhost:8082)  
+Open web browser and hit URL [http://localhost:5000](http://localhost:5000)  
 or  
 Run the following command:
 ```
-curl http://localhost:8082
+curl http://localhost:5000
 ```

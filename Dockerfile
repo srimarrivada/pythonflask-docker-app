@@ -14,8 +14,5 @@ COPY app/. ./app
 # Set envirornment variables for Flask app
 ENV FLASK_APP=app/flask_app.py
 
-# Expose port
-EXPOSE 8082
-
 # Run Flask app
-CMD ["flask", "run", "--host=0.0.0.0", "--port=8082"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]

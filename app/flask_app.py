@@ -1,4 +1,5 @@
 import time
+import socket
 from flask import Flask
     
 app = Flask(__name__)
@@ -12,7 +13,7 @@ def elapsed():
 
 @app.route("/")
 def hello():
-    return "Hello, Dockerized Flask! (uptime: %s)" %elapsed()
+    return "Hello, This Flask app is running on server: %s (uptime: %s)" %(socket.gethostname(),elapsed())
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8082)
+    app.run(debug=True)
